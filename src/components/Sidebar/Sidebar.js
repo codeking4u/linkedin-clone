@@ -4,13 +4,22 @@ import "./Sidebar.css"
 import backgroundImg from  "../../imgs/background.jpg";
 
 function Sidebar() {
+
+    const recentItem = (topic) => {
+        return (<div className="sidebar__recentItem">
+            <span className="sidebar__hash">#</span>
+            <p className="sidebar__hashTopic">{ topic }</p>
+        </div>
+        );
+    };
+
     return (
         <div className="sidebar">
             <div className="sidebar__top">
                 <img src={backgroundImg } alt=""/>
                 <Avatar className="sidebar__avatar" />
                 <h2>Amar Singh</h2>
-                <h4>Software developer | JavaScript Enthusiast</h4>
+                <p>Software developer | JavaScript Enthusiast</p>
             </div>
 
             <div className="sidebar__stats">
@@ -26,7 +35,10 @@ function Sidebar() {
 
             <div className="sidebar__bottom">
                 <p>Recent</p>
-
+                { recentItem("jobseekers")}
+                { recentItem("reactjs")}
+                { recentItem("programming")}
+                { recentItem("developer")}
             </div>
         </div>
     )
