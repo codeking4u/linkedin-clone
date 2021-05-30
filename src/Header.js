@@ -2,7 +2,9 @@ import React from 'react'
 import './Header.css';
 import SearchIcon from '@material-ui/icons/Search';
 import LinkedinImg from './imgs/linkedin.svg';
+import headerProfile from './imgs/header-profile.jpg';
 import HeaderOption from './HeaderOption';
+
 import HomeIcon from '@material-ui/icons/Home';
 import SupervisorAccountIcon from '@material-ui/icons/SupervisorAccount';
 import BusinessCenterIcon from '@material-ui/icons/BusinessCenter';
@@ -26,6 +28,7 @@ function Header() {
                 <HeaderOption Icon={BusinessCenterIcon} title="Jobs" />
                 <HeaderOption Icon={ChatIcon} title="Message" />
                 <HeaderOption Icon={NotificationsIcon} title="Notifications" />
+                <HeaderOption avatar= { headerProfile } title="Me"/>
             </div> 
         </div>
     )
